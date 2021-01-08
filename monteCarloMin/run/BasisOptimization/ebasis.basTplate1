@@ -1,0 +1,51 @@
+NO. OF UNIQUE CENTERS
+7
+---------------HELIUM----------------------- 
+CENTER
+0.  0. 0.
+SYMBOLS
+1
+ S   1
+  1    alpha           1.0d0
+---------------HELIUM----------------------- 
+CENTER
+0.  0. y1
+SYMBOLS
+1
+ S   1
+  1    alpha           1.0d0
+---------------HELIUM----------------------- 
+CENTER
+0.  y1 0.0
+SYMBOLS
+1
+ S   1
+  1    alpha           1.0d0
+---------------HELIUM----------------------- 
+CENTER
+y1 0.0 0.0
+SYMBOLS
+1
+ S   1
+  1    alpha           1.0d0
+---------------HELIUM----------------------- 
+CENTER
+y2 0.0 y2
+SYMBOLS
+1
+ S   1
+  1    alpha           1.0d0
+---------------HELIUM----------------------- 
+CENTER
+y2 y2 0.0
+SYMBOLS
+1
+ S   1
+  1    alpha           1.0d0
+ ---------------HELIUM----------------------- 
+CENTER
+0.0  y2 y2
+SYMBOLS
+1
+ S   1
+  1    alpha           1.0d0

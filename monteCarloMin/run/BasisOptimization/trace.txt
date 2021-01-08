@@ -1,0 +1,11 @@
+ Electron rdm trace      :    1.9884811374754734     
+ Hole rdm trace          :    2.7314467887803202     
+ Smate Trace             :    10.000000000000000     
+ Smatp Trace             :    10.000000000000000     
+ Electronic Product Trace:    1.0000000002652600     
+ Hole Product Trace:         0.99999999854375676     
+ For:   ao_ci_rdm1e.fmt                                                                                                         
+ For:   smatP.ufm                                                                                                               
+ For:   ao_ci_rdm1p.fmt                                                                                                         
+ For:   smatP.ufm                                                                                                               
+ For:   /home/chris/runs/xchf_code/run_3/newfci/runN1.0                                                                         

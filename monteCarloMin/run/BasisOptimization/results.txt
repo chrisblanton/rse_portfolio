@@ -1,0 +1,6 @@
+ Best C1:    1.0000000000000000     
+ Best C2:    0.0000000000000000     
+ EngMin =   0.89947371910763041     
+ Rho from: ao_ci_rho.fmt                                                                                                           
+ Rhotilde from: ao_ci_rho_uncor.fmt                                                                                                     
+ hmat from: ao_ci_hmat.fmt                                                                                                          

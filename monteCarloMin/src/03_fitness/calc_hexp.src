@@ -1,0 +1,9 @@
+subroutine calc_hexp(nb,vec,phi,hmat)
+implicit none
+integer,intent(in) :: nb
+real(wp),intent(in) :: vec(nb)
+real(wp),intent(in) :: phi(nb)
+real(wp),intent(in) :: hmat(nb,nb)
+  ans = dot_product((vec*phi),matmul(hmat,(vec*phi)))
+end subroutine calc_hexp
+

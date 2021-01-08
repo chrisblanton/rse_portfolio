@@ -1,0 +1,23 @@
+Steepest Descent Search Alphas Input File
+Output File Name
+SDSAlp.out
+AlphaLength
+6
+Type of Calculation (1 for all S, 3 for sets of S, P, D)
+3
+InitalPoint
+0.2e0 0.2e0 0.2e0 0.8e0 0.8e0 0.8e0
+maxIterations
+5000
+Step for finite derivatives (h)
+0.001
+Single Parameter Search Step Size (stepSize))
+0.01
+Lower Limit for Single Parameter Search (a)
+0.01
+Upper Limit for Single Parameter Search (b)
+3.0
+Tolerance for function difference (funcTol)
+0.01
+Tolerance for distance difference (distTol)
+0.01

@@ -1,0 +1,71 @@
+------------------------------------------------------------
+                  START OF INPUT FILE
+-------------------------------------------------------------
+$banner
+   title1 = "He-H-He system"
+   title2 = "He-H-He system"
+   title3 = "He-H-He system"
+$end
+-------------------------------------------------------------
+$version
+  version_no = 3.0
+$end
+-------------------------------------------------------------
+NO. OF ELEC. BASIS FUNC (NEBF)
+NO. OF PROTON BASIS FUNC (NPBF)
+NO. OF GAMMA PARAMETERS (NGAM)
+$integer_input
+   NATOM = 1
+   NELEC = 1
+   NPROT = 1
+   NGAM  = 3
+   file_ebasis = "ebasis.inp"
+   file_pbasis = "pbasis.inp"
+   LusecontE = .TRUE.
+$end
+-------------------------------------------------------------
+$exe_opt
+   Lcheckinput = .FALSE.
+
+   Lneo = .T.
+
+   LreadDE = .F.
+   LreadDP = .F.
+
+   LreadOmg1 = .F.
+   LreadOmg2 = .F.
+   LreadOmg3 = .F.
+
+   iconvtyp = 0
+   maxloopE = 1
+   maxloopP = 1
+   maxloopT = 0
+
+$end
+-------------------------------------------------------------
+MASS OF QM NUC (ATOMIC UNITS)
+$qm_nuc
+   pmass = 1.0d0
+$end
+-------------------------------------------------------------
+NUCLEAR CHARGE (znuc)
+CARTESIAN COORD. OF NUCLEI (ATOMIC UNITS)
+$geo_and_charge
+   znuc(1)  = 0.0d0 
+   cmat  = 0.0  0.0  0.0
+           0.0  0.0  0.0
+           0.0  0.0  0.0
+$end 
+-------------------------------------------------------------
+B-COEFF AND GAMMA
+$gamma_input
+   bcoef = 1.210d0   0.4640d0 0.580d0
+   gamma = 0.350d0    3.960d0 0.090d0
+$end
+-------------------------------------------------------------
+                  END OF INPUT FILE
+-------------------------------------------------------------
+   bcoef = 5.046  5.407    3.467
+   gamma = 0.1928 1.2366   8.275
+
+

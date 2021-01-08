@@ -1,0 +1,78 @@
+#!/usr/bin/python
+import sys
+import os
+import linecache
+
+alphaStart = raw_input('Alpha Start = ')
+alphaStart = float(alphaStart)
+alphaEnd = raw_input('Alpha End = ')
+alphaEnd = float(alphaEnd)
+alphaNumSteps = raw_input('Alpha Number of Steps = ')
+alphaNumSteps = int(alphaNumSteps)
+alphaStepSize = (alphaEnd - alphaStart)/(alphaNumSteps-1)
+
+
+hStart = raw_input('H Start = ')
+hStart = float(hStart)
+hEnd = raw_input('H End = ')
+hEnd = float(hEnd)
+hNumSteps = raw_input('H Number of Steps = ')
+hNumSteps = int(hNumSteps)
+hStepSize = (hEnd - hStart)/(hNumSteps-1)
+
+tempAlpha = alphaStart
+
+
+resultsfilename = 'BasisOpt.txt'
+results = open(resultsfilename, 'w')
+results.write('H        Alpha        Energy\n')
+
+while tempAlpha <= alphaEnd:
+    tempH = hStart
+    while tempH <= hEnd:
+        outfilename = 'ebasis.inp'
+        outfile = open(outfilename, 'w')
+        outfile.write('NO. OF UNIQUE CENTERS\n')
+        #Here is where the number of centers go. 
+        outfile.write(str(numOfUniCen))
+        outfile.write('---------------HELIUM-----------------------\n')
+        outfile.write('CENTER\n')
+        #Here is where the new centers (h's go). 
+        outfile.write('0.0 0.0 0.0\n')
+        #Angular function equivalents
+        #Write the previous best functions from file here. 
+        prevBestPosName = 'prevBestPos'
+        prevBestPos = open(prevBestPosName, 'r')
+        pBp = prevBestPos.readlines
+        prevBestPos.close()
+        outfile.writelines(pBp)
+        outfile.write(str(tempH) + ' 0.0 0.0\n')
+        outfile.write('0.0 ' + str(tempH) + ' 0.0\n')
+        outfile.write('0.0 0.0 ' + str(tempH) + '\n')
+        outfile.write(str(tempH) + ' ' + str(tempH) + ' 0.0\n')
+        outfile.write(str(tempH) + ' 0.0 ' + str(tempH) + '\n')
+        outfile.write('0.0 ' + str(tempH) + ' ' + str(tempH) + '\n')
+        outfile.write(str(tempH) + ' 0.0 0.0\n')
+        outfile.write('0.0 ' + str(tempH) + ' 0.0\n')
+        outfile.write('0.0 0.0 ' + str(tempH) + '\n')
+        outfile.write('SYMBOLS\n')
+        #Here is where the total number of functions go.
+        numOfAlphas = 1
+	while numOfAlphas <=9:        
+            outfile.write('1\n')
+            outfile.write('S 1\n')
+            outfile.write('1 ' + str(tempAlpha) + 'd0 1.0d0')
+        outfile.close()
+        os.system('./script1.sh')
+        answerfilename = 'ans.2'
+        line = linecache.getline(answerfilename, 2)
+        energyline = line.split()
+        energy = energyline[1]
+        linecache.clearcache
+        ansString = str(tempH) + ' '+ str(tempAlpha)+ ' ' + energy 
+        results.write(ansString + '\n')
+        tempH = tempH + hStepSize
+    tempAlpha = tempAlpha + alphaStepSize
+
+results.close()
+        
